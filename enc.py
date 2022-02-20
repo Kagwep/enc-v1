@@ -30,30 +30,21 @@ form = []
 to_encode = []
 char_lenght = []
 #encoded = string
-print(string[1])
+#print(string[1])
 
 for element in string:
     form.append(string.find(element))
    # print(element)
     to_encode.append(element.lower())
 print(to_encode)
-to_encode = set(to_encode)
-for charss in char_list_two:
-    char_to_assign = random.choice(char_list_one)
-    if charss in to_encode:
-        to_encode = list(map(lambda x: x.replace(charss, str(char_to_assign) + ">"+ charss), to_encode))
-        #encoded = string.lower().replace(chars, char_to_assign)
-        new_l = char_lenght.append(len(char_to_assign))
-       
-        
-    char_assigned.append(charss + " > " + char_to_assign)
-    
-    control.append(char_to_assign)
 
-#print(string)
-print(to_encode)
-print(form)
-print(char_assigned)
+
+for charss in to_encode:
+    char_to_assign = random.choice(char_list_one)
+    char_assigned.append(char_to_assign)
+
+char_assignedToStr = ''.join([str(elem) for elem in char_assigned])
+print(char_assignedToStr)
 #print(encoded)
 #print(control)
 #print(char_lenght)
