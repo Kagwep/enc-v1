@@ -29,26 +29,40 @@ control = []
 form = []
 to_encode = []
 char_lenght = []
+key_get1 = []
+char_encoder_len = []
 #encoded = string
 #print(string[1])
+def encode():
+    for element in string:
+        form.append(string.find(element))
+       # print(element)
+        to_encode.append(element.lower())
+    print(to_encode)
+    for get_elements in to_encode:
+        the_index = to_encode.index(get_elements)
+        key_get1.append(the_index)
+    print(key_get1)
+    
+    for charss in to_encode:
+        char_to_assign = random.choice(char_list_one)
+        char_assigned.append(char_to_assign)
+    for check in char_assigned:
+        char_len = len(check)
+        char_encoder_len.append(char_len)
+    print(char_encoder_len)
+    print(char_assigned)
+    
+    char_assignedToStr = ''.join([str(elem) for elem in char_assigned])
+    print(char_assignedToStr)
+    #print(encoded)
+    #print(control)
+    #print(char_lenght)
+encode()
 
-for element in string:
-    form.append(string.find(element))
-   # print(element)
-    to_encode.append(element.lower())
-print(to_encode)
-
-
-for charss in to_encode:
-    char_to_assign = random.choice(char_list_one)
-    char_assigned.append(char_to_assign)
-
-char_assignedToStr = ''.join([str(elem) for elem in char_assigned])
-print(char_assignedToStr)
-#print(encoded)
-#print(control)
-#print(char_lenght)
-
+def decode():
+ pass
+decode()
 
 
 
