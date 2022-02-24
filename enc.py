@@ -7,6 +7,7 @@ Created on Mon Feb  7 18:29:49 2022
 import random
 
 
+
 string = ' Attention dation Course and learn the basics.'
 
 
@@ -31,37 +32,35 @@ to_encode = []
 char_lenght = []
 key_get1 = []
 char_encoder_len = []
-#encoded = string
-#print(string[1])
+to = [0]
+
 def encode():
     for element in string:
         form.append(string.find(element))
        # print(element)
         to_encode.append(element.lower())
-    print(to_encode)
-    for get_elements in to_encode:
-        the_index = to_encode.index(get_elements)
-        key_get1.append(the_index)
-    print(key_get1)
-    
+   # print(to_encode) 
     for charss in to_encode:
         char_to_assign = random.choice(char_list_one)
         char_assigned.append(char_to_assign)
     for check in char_assigned:
         char_len = len(check)
         char_encoder_len.append(char_len)
-    print(char_encoder_len)
-    print(char_assigned)
-    
+    #print(char_assigned)
+    global char_assignedToStr
     char_assignedToStr = ''.join([str(elem) for elem in char_assigned])
     print(char_assignedToStr)
-    #print(encoded)
-    #print(control)
-    #print(char_lenght)
-encode()
 
+encode()
+decoded = []
 def decode():
- pass
+    
+    for i in tuple(char_encoder_len):
+        val = to[-1]
+        to.append(i + to[-1])
+        decoded.append(char_assignedToStr[val:to[-1]])
+    #print(decoded)
+        
 decode()
 
 
