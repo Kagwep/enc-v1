@@ -2,7 +2,7 @@
 """
 Created on Mon Feb  7 18:29:49 2022
 
-@author: Pc
+@author: kagwep
 """
 import random
 
@@ -39,6 +39,7 @@ def encode():
         form.append(string.find(element))
        # print(element)
         to_encode.append(element.lower())
+        key_get1.append(element.lower())
    # print(to_encode) 
     for charss in to_encode:
         char_to_assign = random.choice(char_list_one)
@@ -46,11 +47,13 @@ def encode():
     for check in char_assigned:
         char_len = len(check)
         char_encoder_len.append(char_len)
-    #print(char_assigned)
+    print(char_assigned)
+    
     global char_assignedToStr
     char_assignedToStr = ''.join([str(elem) for elem in char_assigned])
     print(char_assignedToStr)
-
+key1 = tuple(char_encoder_len)
+key2 = key_get1
 encode()
 decoded = []
 def decode():
